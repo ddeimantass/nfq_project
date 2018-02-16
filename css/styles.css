@@ -1,0 +1,80 @@
+h1{
+    font-size: 30px !important;
+}
+#product{
+    display: flex;
+/*    flex-wrap: wrap;*/
+}
+div.book{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+/*    width: 32%;*/
+    width: 100%;
+    margin: 0 10px 10px 0;
+/*    max-width: 500px;*/
+}
+div.book div{
+    cursor: pointer;
+    width: 120px;
+    padding: 10px 0px;
+    background: #3c8dbc;
+    color: #fff;
+    font-size: 17px;
+    margin: 10px auto;
+    text-align: center;
+}
+div.book h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+div.book > p{
+    text-align: justify;
+}
+div.popUpBg{
+display: none;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    position: fixed;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+}
+div.popUpBg > div.popUpWrapper{
+    
+    width: 700px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+div.popUpBg > div.popUpWrapper .notice{
+    margin: 0 0 5px 0;
+    color: #d73925;
+}
+div.popUpBg > div.popUpWrapper .buttons{
+    margin: 10px auto 0;
+}
+
+div.popUpBg > div.popUpWrapper p, div.popUpBg > div.popUpWrapper h3{
+    text-align: center;
+}
+div.popUpBg > div.popUpWrapper form{
+    display: flex;
+    justify-content: center;
+}
+div.popUpBg > div.popUpWrapper form input{
+    border: 1px solid #eee;
+    padding: 3px 5px;
+    width: 25%;
+    margin: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

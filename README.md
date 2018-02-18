@@ -1,4 +1,8 @@
-# NFQ Testinė užduotis
+# NFQ testinė užduotis
+
+## Nuoroda į sprendimą
+
+https://knyga.herokuapp.com
 
 ## Įgyvendimimas
 

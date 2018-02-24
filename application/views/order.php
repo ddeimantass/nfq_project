@@ -23,14 +23,16 @@
                             </thead>
                             <tbody>
                             <?php foreach($orders as $order){
-                                echo "<tr>";
-                                echo "<td>".$order->id."</td>";
-                                echo "<td>".$order->name."</td>";
-                                echo "<td>".$order->email."</td>";
-                                echo "<td>".$order->phone."</td>";
-                                echo "<td>".$books[$order->book_id]->title."</td>";
-                                echo "<td>".$order->date."</td>";
-                                echo "</tr>";
+                                if(isset($books[$order->book_id])){
+                                    echo "<tr>";
+                                    echo "<td>".$order->id."</td>";
+                                    echo "<td>".$order->name."</td>";
+                                    echo "<td>".$order->email."</td>";
+                                    echo "<td>".$order->phone."</td>";
+                                    echo "<td>".$books[$order->book_id]->title."</td>";
+                                    echo "<td>".$order->date."</td>";
+                                    echo "</tr>";
+                                }
                             } ?>
                             </tbody>
                         </table>

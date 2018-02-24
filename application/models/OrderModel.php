@@ -8,6 +8,10 @@ class OrderModel extends CI_Model {
     }
 
     public function addNewOrder($data) {
+        if(null === $this->bookModel->getBookById($data["book_id"])){
+            return "Nepavyko rasti nurodytos knygos";
+        }
+           
         $this->load->library('form_validation');
         
         $this->form_validation->set_rules("book_id", "book_id",'trim|required|xss_clean|numeric|max_length[9]');
@@ -47,4 +51,5 @@ class OrderModel extends CI_Model {
         }
         return $orders;
 	}
+    
 }

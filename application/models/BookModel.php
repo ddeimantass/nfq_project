@@ -16,5 +16,13 @@ class BookModel extends CI_Model {
         }
         return $books;
 	}
-
+    
+    public function getBookById($id) {
+        $query = $this->db->get_where('books','id='.$id);
+        foreach ($query->result() as $row)
+        {
+            return $row;
+        }
+        return null;
+	}
 }

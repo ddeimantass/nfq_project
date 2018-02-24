@@ -6,7 +6,14 @@ class Store extends CI_Controller {
     public function index() {
         
         if(isset($_POST) && !empty($_POST)){
-            echo $this->orderModel->addNewOrder($_POST);
+            
+            $data= array(
+                'name' => htmlspecialchars($this->input->post('name')),
+                'email' => htmlspecialchars($this->input->post('email')),
+                'book_id' => htmlspecialchars($this->input->post('book_id')),
+                'phone' => htmlspecialchars($this->input->post('phone'))
+            );
+            echo $this->orderModel->addNewOrder($data);
             die();
         }
         

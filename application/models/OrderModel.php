@@ -8,6 +8,7 @@ class OrderModel extends CI_Model {
     }
 
     public function addNewOrder($data) {
+        $data["book_id"] = htmlspecialchars($data["book_id"]);
         if(null === $this->bookModel->getBookById($data["book_id"])){
             return "Nepavyko rasti nurodytos knygos";
         }
